@@ -63,3 +63,24 @@ h2.sec{font:800 clamp(26px,3.4vw,34px)/1.15 var(--head);letter-spacing:-.025em;c
 .lic{width:100%;border-collapse:collapse;font:500 15px/1.5 var(--head)}.lic th,.lic td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 .lic thead th{font-weight:800;color:var(--ink);background:#e8f3ec;white-space:nowrap}.lic tbody th{font-weight:700;color:var(--ink);white-space:nowrap}.lic tr:last-child th,.lic tr:last-child td{border-bottom:0}
 .note{font:500 14px/1.6 var(--head);color:var(--muted)}
+
+/* ---- mobile fixes ---- */
+@media(max-width:900px){
+  .hero,.layout{grid-template-columns:minmax(0,1fr)}
+  .doc{overflow-wrap:anywhere}
+  .toc summary{display:flex;justify-content:space-between;align-items:center}
+  .toc summary:after{content:"▾"}
+  .toc details[open] summary:after{content:"▴"}
+}
+@media(max-width:560px){
+  .topbar-in{gap:8px}
+  .brand{font-size:16px;gap:8px;white-space:nowrap}
+  .mark{width:30px;height:30px}
+  .nav{gap:0}
+  .nav a{padding:6px 8px;font-size:13px}
+  .sheet{padding-left:48px}
+  .sheet:before{left:34px}
+  .qa li:before{left:-42px;width:32px}
+  .actions .btn{flex:1 1 100%;justify-content:center}
+}
+.sheet h2{margin-bottom:-3px}
